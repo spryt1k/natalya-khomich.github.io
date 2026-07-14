@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наталья Хомич — Портфолио</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #FAFAFA; color: #111827; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-dark {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- СЕКЦИЯ: ПРИВЕТСТВИЕ (HERO) -->
+    <section id="hero" class="relative h-screen w-full flex items-end pb-24 sm:pb-32 justify-start px-6 sm:px-16 lg:px-32 bg-cover bg-center bg-no-repeat overflow-hidden" 
+             style="background-image: url('natasha-general.jpg');">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+
+        <div class="relative z-10 text-white max-w-4xl reveal active">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-5">Хомич Наталья</h1>
+            <p class="text-base sm:text-xl font-light tracking-widest text-gray-300 mb-12 uppercase flex flex-wrap gap-x-4 gap-y-2 items-center">
+                <span>Журналист</span> <span class="text-accent text-xl">•</span>
+                <span>Продюсер</span> <span class="text-accent text-xl">•</span>
+                <span>Диктор</span> <span class="text-accent text-xl">•</span>
+                <span>Доброволец</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5">
+                <a href="#about" class="px-8 py-4 bg-accent hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] text-center tracking-wide">
+                    Смотреть портфолио
+                </a>
+                <a href="#contact" class="px-8 py-4 glass-dark hover:bg-white/20 text-white rounded-full font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 tracking-wide">
+                    Связаться <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: О СЕБЕ -->
+    <section id="about" class="py-28 px-6 sm:px-16 lg:px-32 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-8 text-gray-900 tracking-tight leading-tight">Медиа — это <span class="text-accent">моя среда</span></h2>
+                <div class="space-y-6 text-gray-600">
+                    <p class="text-2xl font-medium text-gray-800 leading-relaxed">
+                        Мне 18 лет, я из Калининграда.<br>
+                        Готовлюсь к поступлению на факультет журналистики и уже активно работаю в медиасфере.
+                    </p>
+                    <p class="text-lg leading-relaxed font-light">
+                        Создаю контент, продюсирую творческие проекты, озвучиваю аудиокниги и рекламу. Умею работать с камерой, монтажом и аудиторией — как на сцене, так и за её пределами.
+                    </p>
+                    
+                    <!-- Блок с деятельностью (изображение) -->
+                    <div class="mt-8 rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
+                        <img src="Деятельность.jpg" alt="Профессиональная деятельность" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal delay-200">
+                <div class="bg-gradient-to-br from-blue-50/60 to-white border border-blue-100/80 rounded-[2.5rem] p-10 sm:p-12 shadow-xl shadow-blue-950/5 relative overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 mb-8">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all group-hover:bg-accent/20"></div>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center shadow-lg shadow-blue-600/20">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Цель</h3>
+                    </div>
+                    <p class="text-xl text-gray-700 leading-relaxed relative z-10 font-light">
+                        Поступить на факультет журналистики и развиваться в сфере медиа, создавая и продвигая качественный социально значимый контент.
+                    </p>
+                </div>
+
+                <!-- Блок Характеристика -->
+                <div class="glass-dark bg-gray-900 border border-gray-800 rounded-[2.5rem] p-8 sm:p-10 flex flex-col items-start gap-6 shadow-xl hover:shadow-2xl transition-all duration-500 group overflow-hidden relative">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl group-hover:bg-accent/30 transition-all"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="text-accent"></i> Характеристика
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Официальная характеристика от школы, подтверждающая профессиональные качества, навыки и опыт работы.</p>
+                        <a href="docs/Характеристика Хомич.pdf" target="_blank" class="inline-flex px-8 py-3.5 bg-accent hover:bg-blue-600 text-white rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] items-center gap-2">
+                            <i data-lucide="download" class="w-4 h-4"></i> Открыть 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ОПЫТ И ДОСТИЖЕНИЯ -->
+    <section class="py-24 bg-white px-6 sm:px-16 lg:px-32 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-16 text-gray-900 tracking-tight reveal">Опыт и <span class="text-accent">достижения</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Карточки опыта оставлены без изменений, как в оригинале -->
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="clapperboard" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Продюсер</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">к/м фильм «Во спасение» Веры Колосовой</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">Координировала творческую команду, организовывала съёмки, контролировала сроки, участвовала в пре-, постпродакшене, принимала решения по визуальному и звуковому оформлению.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#кино</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#продюсирование</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#production</span>
+                    </div>
+                </div>
+
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal delay-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="mic" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Диктор</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">Озвучивание книг и рекламы</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">Озвучила книгу «Пятая дисциплина» Питера Сенге. Регулярно озвучиваю рекламные ролики и автоответчики. Профессионально работаю с различными интонациями, подачей и стилями.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#дикция</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#студийнаяЗапись</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#реклама</span>
+                    </div>
+                </div>
+
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="video" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Автор контента</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">Социальные медиапроекты</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">Самостоятельно снимаю и монтирую социальные опросы на актуальные темы. Провожу уличные мини-интервью, умею быстро находить контакт с любыми собеседниками.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#видео</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#монтаж</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#интервью</span>
+                    </div>
+                </div>
+
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Ведущая • Модератор</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">Публичные события</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">Опыт ведения крупных мероприятий и научных конференций в Калининграде. Модерирую дискуссии, держу внимание аудитории, обеспечиваю тайминг и регламент.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#модерация</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#публичныеВыступления</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#организация</span>
+                    </div>
+                </div>
+
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal delay-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Сценарист • Актриса</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">Творческий бэкграунд</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">12 лет в хореографии (балет, хип-хоп, модерн), 3 года игры в КВН. 2 года работы сценаристом-постановщиком: от проработки драматургии до режиссуры репетиций.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#КВН</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#сценарии</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#танцы</span>
+                    </div>
+                </div>
+
+                <div class="glass border border-gray-100 rounded-3xl p-8 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1 text-gray-900">Доброволец</h3>
+                        <p class="text-sm text-gray-400 mb-4 font-medium">458 часов волонтёрства</p>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">Активно участвую в масштабных социально значимых проектах, посвящённых развитию культуры, искусства, экологии, сохранению исторической памяти и ЗОЖ.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#волонтёрство</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#экология</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-full text-xs font-medium tracking-wide">#культура</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: НАВЫКИ -->
+    <section class="py-24 bg-gray-50 px-6 sm:px-16 lg:px-32 border-y border-gray-200/60">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-16 text-gray-900 tracking-tight reveal">Профессиональный <span class="text-accent">профиль</span></h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-800 flex items-center gap-3">
+                        <i data-lucide="briefcase" class="text-accent w-6 h-6"></i> Практические навыки
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Журналистика и медиа</h4>
+                            <p class="text-gray-600 font-light">Съёмка, профессиональный монтаж видео, проведение интервью, разработка и проведение социальных опросов.</p>
+                        </div>
+                        <div class="w-full h-px bg-gray-200"></div>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Продюсирование</h4>
+                            <p class="text-gray-600 font-light">Координация съемочных групп, организация пре-продакшена и контроль этапов пост-продакшена.</p>
+                        </div>
+                        <div class="w-full h-px bg-gray-200"></div>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Озвучивание</h4>
+                            <p class="text-gray-600 font-light">Поставленная чёткая дикция, опыт работы на студии звукозаписи, озвучивание рекламы и книг.</p>
+                        </div>
+                        <div class="w-full h-px bg-gray-200"></div>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Сценарное мастерство</h4>
+                            <p class="text-gray-600 font-light">Написание юмористических и драматических сценариев, выстраивание драматургии номеров и проектов.</p>
+                        </div>
+                        <div class="w-full h-px bg-gray-200"></div>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Публичные выступления</h4>
+                            <p class="text-gray-600 font-light">Уверенная работа на сцене, модерация круглых столов, ведение официальных и научных конференций.</p>
+                        </div>
+                        <div class="w-full h-px bg-gray-200"></div>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1 transition-colors group-hover:text-accent">Фотография</h4>
+                            <p class="text-gray-600 font-light">Понимание законов композиции, опыт работы со студийным импульсным и постоянным светом.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal delay-200">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-800 flex items-center gap-3">
+                        <i data-lucide="user" class="text-accent w-6 h-6"></i> Личные качества
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Креативность</span>
+                        </div>
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Ответственность</span>
+                        </div>
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Командный игрок</span>
+                        </div>
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Инициативность</span>
+                        </div>
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Внимание к деталям</span>
+                        </div>
+                        <div class="px-6 py-5 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-default">
+                            <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                            <span class="text-lg font-medium text-gray-800">Работоспособность</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ПРОФЕССИОНАЛЬНЫЕ ВСТРЕЧИ -->
+    <section class="py-24 bg-white px-6 sm:px-16 lg:px-32">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-16 text-gray-900 tracking-tight reveal">С кем удалось <span class="text-accent">поработать</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Михалёв -->
+                <div class="glass border border-gray-100 rounded-3xl overflow-hidden hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 reveal group">
+                    <div class="w-full h-80 sm:h-96 overflow-hidden relative">
+                        <img src="Фото с Михалëвым.jpg" alt="Антон Михалёв" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 bg-white flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Антон Владимирович Михалёв</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Интервью с российским режиссёром-постановщиком.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Лоренцо -->
+                <div class="glass border border-gray-100 rounded-3xl overflow-hidden hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 reveal delay-100 group">
+                    <div class="w-full h-80 sm:h-96 overflow-hidden relative">
+                        <img src="Фото с Лоренцо.jpg" alt="Лоренцо Баньятти" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 bg-white flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Лоренцо Баньятти</h3>
+                            <p class="text-gray-600 font-light leading-relaxed">Организация Q&A-сессии с популярным итальянским пианистом-виртуозом, русскоязычным блогером, тиктокером и телеведущим.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ОБРАЗОВАНИЕ -->
+    <section class="py-24 bg-gray-50/50 px-6 sm:px-16 lg:px-32 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-16 text-gray-900 tracking-tight reveal">Образование и <span class="text-accent">развитие</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:border-accent/20 hover:shadow-xl transition-all duration-300 reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <p class="text-xs text-accent font-bold tracking-widest uppercase mb-2">Курс</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Кино- и видеопроизводство</h3>
+                    </div>
+                    <p class="text-gray-600 font-light">Центр развития одарённых детей<br><span class="text-sm text-gray-400 font-medium">посёлок Ладушкин</span></p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:border-accent/20 hover:shadow-xl transition-all duration-300 reveal delay-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <p class="text-xs text-accent font-bold tracking-widest uppercase mb-2">Форум</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">БалтАртек</h3>
+                    </div>
+                    <p class="text-gray-600 font-light">Неоднократный участник молодёжного образовательного форума «БалтАртек», защита проектов.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:border-accent/20 hover:shadow-xl transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <p class="text-xs text-accent font-bold tracking-widest uppercase mb-2">Интенсивы</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Медиасфера</h3>
+                    </div>
+                    <p class="text-gray-600 font-light">Регулярный слушатель открытых лекций, участник профильных конференций и программ по медиапроизводству.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ИНТЕРАКТИВНЫЙ МЕДИАХАБ -->
+    <section id="portfolio-hub" class="py-24 bg-gray-900 text-white px-6 sm:px-16 lg:px-32 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-accent/10 blur-[120px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto text-center reveal relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Материалы и медиапроекты</h2>
+            <p class="text-gray-400 mb-12 max-w-3xl mx-auto text-lg font-light">
+                Выберите категорию ниже, чтобы мгновенно развернуть и изучить текстовые статьи, дикторские аудиозаписи или официальные наградные документы.
+            </p>
+            
+            <!-- Сетка управляющих интерактивных кнопок -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-16">
+                
+                <!-- Вкладка 1: Статьи и Проекты -->
+                <button onclick="toggleTab('articles-tab')" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Тексты и статьи</span>
+                </button>
+
+                <!-- Вкладка 2: Проекты (совмещена с Текстами) -->
+                <button onclick="toggleTab('articles-tab')" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="scroll" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Наука и Сценарии</span>
+                </button>
+
+                <!-- Вкладка 3: Скролл к видео -->
+                <a href="#video" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg text-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="play-circle" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Видеоработы</span>
+                </a>
+
+                <!-- Вкладка 4: Озвучка -->
+                <button onclick="toggleTab('audio-tab')" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="headphones" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Примеры озвучки</span>
+                </button>
+
+                <!-- Вкладка 5: Скролл к фото -->
+                <a href="#gallery" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg text-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="image" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Фотографии</span>
+                </a>
+
+                <!-- Вкладка 6: Дипломы -->
+                <button onclick="toggleTab('certificates-tab')" class="group px-6 py-6 bg-white/5 hover:bg-accent/20 rounded-2xl transition-all duration-300 flex flex-col items-center gap-3 border border-white/10 hover:border-accent/50 shadow-lg cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <i data-lucide="file-check" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold tracking-wide uppercase text-xs">Дипломы и серт.</span>
+                </button>
+
+            </div>
+
+            <!-- ДИНАМИЧЕСКИЕ КОНТЕЙНЕРЫ (ВЫПАДАЮТ СНИЗУ) -->
+            <div class="max-w-5xl mx-auto text-left space-y-6">
+                
+                <!-- БЛОК СТАТЕЙ И ДОКУМЕНТОВ -->
+                <div id="articles-tab" class="hidden bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl transition-all duration-500">
+                    <h3 class="text-xl font-bold mb-8 flex items-center gap-2 text-accent"><i data-lucide="folder-open"></i> Проекты и публикации</h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Журналистика -->
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Журналистика</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <a href="docs/Selma_article.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Статья «Сельма»</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                                <a href="docs/Theater_article.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Статья «Театр»</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                                <a href="docs/Volleyball_article.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Статья «Волейбол»</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                                <a href="docs/Заметка выставка.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Заметка: Выставка</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                                <a href="docs/Заметки.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Сборник заметок</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Научная деятельность -->
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Научная деятельность</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <a href="docs/Проект «СЛЕНГ И ЖАРГОНИЗМЫ В РЕЧИ ШКОЛЬНИКОВ».pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white truncate">Проект «Сленг и жаргонизмы»</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0 ml-2"></i>
+                                </a>
+                                <a href="docs/Работа.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Исследовательская работа</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Творческие проекты -->
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Творческие проекты</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <a href="docs/Сценарий КВН.pdf" target="_blank" class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition group">
+                                    <span class="text-sm font-medium text-gray-200 group-hover:text-white">Сценарий КВН</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-accent shrink-0"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- БЛОК АУДИО (ПРИМЕРЫ ОЗВУЧКИ + ОТЗЫВ) -->
+                <div id="audio-tab" class="hidden bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Плееры -->
+                        <div class="lg:col-span-2">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-accent"><i data-lucide="headphones"></i> Дикторское портфолио</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="p-4 bg-white/5 border border-white/5 rounded-2xl flex flex-col justify-between gap-4">
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-white mb-1">Отрывок из книги «Пятая дисциплина»</h4>
+                                        <p class="text-xs text-gray-400 font-light">Чтение бизнес-литературы, аудиокниги</p>
+                                    </div>
+                                    <audio controls class="w-full h-10 mt-2 opacity-90 hover:opacity-100 transition">
+                                        <source src="audio/5-disciplina-otrivok.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/5 rounded-2xl flex flex-col justify-between gap-4">
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-white mb-1">Голос для автоответчика</h4>
+                                        <p class="text-xs text-gray-400 font-light">Корпоративный и приветственный стиль (IVR)</p>
+                                    </div>
+                                    <audio controls class="w-full h-10 mt-2 opacity-90 hover:opacity-100 transition">
+                                        <source src="audio/avtootvetchik.wav" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/5 rounded-2xl flex flex-col justify-between gap-4">
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-white mb-1">Дикторская озвучка рекламы (Демо)</h4>
+                                        <p class="text-xs text-gray-400 font-light">Подача, динамика, рекламные интеграции</p>
+                                    </div>
+                                    <audio controls class="w-full h-10 mt-2 opacity-90 hover:opacity-100 transition">
+                                        <source src="audio/Demo-reklama-dictorskoy-ozvuchki.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/5 rounded-2xl flex flex-col justify-between gap-4">
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-white mb-1">Рекламный аудиоролик №1</h4>
+                                        <p class="text-xs text-gray-400 font-light">Коммерческий продакшн контента</p>
+                                    </div>
+                                    <audio controls class="w-full h-10 mt-2 opacity-90 hover:opacity-100 transition">
+                                        <source src="audio/reklama-1.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв о работе диктора -->
+                        <div class="lg:col-span-1 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-accent"><i data-lucide="message-square"></i> Отзыв заказчика</h3>
+                            <a href="Дикторство отзыв.jpg" target="_blank" class="block rounded-2xl overflow-hidden border border-white/10 relative group shadow-lg">
+                                <img src="Дикторство отзыв.jpg" alt="Отзыв о работе диктора" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-white text-sm font-medium border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm shadow-xl">Увеличить фото</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- БЛОК СЕРТИФИКАТОВ И ДИПЛОМОВ (Галлерея) -->
+                <div id="certificates-tab" class="hidden bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl transition-all duration-500">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-accent"><i data-lucide="file-check"></i> Официальные награды, дипломы и сертификаты</h3>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <a href="certificates/БалтАртек.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">БалтАртек</span>
+                        </a>
+                        <a href="certificates/Балтика.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Балтика</span>
+                        </a>
+                        <a href="certificates/Большая перемена.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Большая перемена</span>
+                        </a>
+                        <a href="certificates/Диплом 9 класс МХК.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Призёр ВСОШ (9 кл)</span>
+                        </a>
+                        <a href="certificates/Диплом 10 класс МХК.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Призёр ВСОШ (10 кл)</span>
+                        </a>
+                        <a href="certificates/Диплом 'Умники и умницы'.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Диплом: Умники и умницы</span>
+                        </a>
+                        <a href="certificates/Кантата.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Кантата</span>
+                        </a>
+                        <a href="certificates/Диплом КВН.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">КВН</span>
+                        </a>
+                        <a href="certificates/Благодарность кинематографии.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Фестивальная дирекция</span>
+                        </a>
+                        <a href="certificates/Благодарность радио МонтеКарло.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">МонтеКарло</span>
+                        </a>
+                        <a href="certificates/Благодарность от историко-художественного музея (реконструкция).pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Музей (Реконструкция)</span>
+                        </a>
+                        <a href="certificates/Благодарность СберБанк.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Сбербанк</span>
+                        </a>
+                        <a href="certificates/Сертификат 'Умники и умницы'.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Серт: Умники и умницы</span>
+                        </a>
+                        <a href="certificates/Сертификат английский язык.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Английский язык</span>
+                        </a>
+                        <a href="certificates/Диплоом танцы.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Танцы</span>
+                        </a>
+                        <a href="certificates/Благодарность от историко-художественного музея (танцы).pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">Музей (Танцы)</span>
+                        </a>
+                        <a href="certificates/Сертификат ЦРОД.pdf" target="_blank" class="group flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent/50 transition-all duration-300 text-center">
+                            <div class="w-full aspect-[3/4] bg-black/30 rounded-xl mb-3 flex items-center justify-center group-hover:bg-accent/20 transition-colors border border-white/5 shadow-inner">
+                                <i data-lucide="award" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-white line-clamp-2">ЦРОД</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ВИДЕОПЛЕЕР -->
+    <section id="video" class="py-24 bg-white px-6 sm:px-16 lg:px-32 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center md:text-left mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 tracking-tight reveal">Видеопроизводство и <span class="text-accent">монтаж</span></h2>
+                <p class="text-gray-500 max-w-xl font-light reveal delay-100">Шоурилы творческих проектов, режиссерские и продюсерские работы в реальном времени.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-gray-200 reveal delay-200">
+                <video class="w-full h-auto aspect-video object-cover" controls playsinline preload="metadata">
+                    <source src="video_1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает встроенные видеоплееры.
+                </video>
+            </div>
+            <br>
+
+            <div class="max-w-4xl mx-auto bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-gray-200 reveal delay-200">
+                <video class="w-full h-auto aspect-video object-cover" controls playsinline preload="metadata">
+                    <source src="video_2.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает встроенные видеоплееры.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ФОТОГАЛЕРЕЯ -->
+    <section id="gallery" class="py-24 bg-gray-50/50 px-6 sm:px-16 lg:px-32">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center md:text-left mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 tracking-tight reveal">Репортажи и <span class="text-accent">кадры</span></h2>
+                <p class="text-gray-500 max-w-xl font-light reveal delay-100">Рабочие моменты со съёмок, бэкстейджи творческих проектов и репортажная фотография.</p>
+            </div>
+            
+            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 reveal delay-200">
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_1.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_2.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_3.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_4.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_5.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_6.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_7.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_8.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_9.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_10.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_11.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_12.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-2xl border border-gray-100 shadow-sm group relative cursor-pointer">
+                    <img src="photo_13.jpg" alt="Медиа фото" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: КОНТАКТЫ -->
+    <section id="contact" class="py-32 px-6 sm:px-16 lg:px-32 bg-accent relative overflow-hidden flex flex-col items-center justify-center text-center">
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-black/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+        
+        <div class="relative z-10 max-w-4xl reveal">
+            <i data-lucide="quote" class="w-14 h-14 text-white/20 mx-auto mb-8"></i>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-16 leading-tight tracking-tight">
+                «Медиа — это возможность менять общество через качественный контент.»
+            </h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="https://t.me/naly_wee" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-accent rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl text-center tracking-wide flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-4 h-4"></i> Написать в Telegram
+                </a>
+                <a href="tel:+79316097743" class="w-full sm:w-auto px-8 py-4 bg-accent border border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 text-center flex items-center justify-center gap-2 tracking-wide">
+                    <i data-lucide="phone" class="w-4 h-4"></i> +7 (931) 609-77-43
+                </a>
+            </div>
+
+            <div class="mt-20 flex justify-center gap-8 text-white/60">
+                <a href="https://t.me/naly_wee" target="_blank" class="hover:text-white transition-colors transform hover:scale-110 duration-200" title="Telegram">
+                    <i data-lucide="send" class="w-6 h-6"></i>
+                </a>
+                <a href="https://vk.com/naly_wee" target="_blank" class="hover:text-white transition-colors transform hover:scale-110 duration-200 flex items-center" title="ВКонтакте">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.071 20.354c-8.156 0-12.83-5.69-12.981-15.228h3.918c.106 7.153 3.313 10.15 5.82 10.776v-10.776h3.766v6.155c2.472-.27 5.12-3.13 5.892-6.155h3.767c-.437 3.535-3.072 6.44-5.061 7.6 1.989.966 4.935 3.55 5.626 7.628h-3.996c-.534-2.825-2.73-5.04-5.226-5.356v5.356h-1.525z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        // Логика управления вкладками в медиа-хабе
+        function toggleTab(tabId) {
+            const tab = document.getElementById(tabId);
+            
+            // Если вкладка уже открыта — скрываем её
+            if (!tab.classList.contains('hidden')) {
+                tab.classList.add('hidden');
+                return;
+            }
+
+            // Скрываем все остальные вкладки
+            document.getElementById('articles-tab').classList.add('hidden');
+            document.getElementById('audio-tab').classList.add('hidden');
+            document.getElementById('certificates-tab').classList.add('hidden');
+
+            // Открываем нужную
+            tab.classList.remove('hidden');
+            
+            // Плавно подкручиваем экран к открывшемуся блоку
+            setTimeout(() => {
+                tab.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        // Анимация блоков при скролле
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Эффект параллакса для первого экрана
+        window.addEventListener('scroll', () => {
+            const hero = document.getElementById('hero');
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                hero.style.backgroundPositionY = `${scrolled * 0.4}px`;
+            }
+        });
+    </script>
+</body>
+</html>
